@@ -1,171 +1,324 @@
-//       Пути к обьектам HTML
-
-// var task1 = document.getElementById('task1');
-// var task2 = document.getElementById('task2');
-// var task3 = document.getElementById('task3');
-// var task4 = document.getElementById('task4');
-// var task5 = document.getElementById('task5');
-// var task6 = document.getElementById('task6');
-// var task7 = document.getElementById('task7');
-// var task8 = document.getElementById('task8');
-// var task9 = document.getElementById('task9');
-// var task10 = document.getElementById('task10');
-
-//
 
 // ------------------------------- Task 1 ----------------------------------
-
-// Написать функцию, которая принимает 2 числа
-// и возвра - щает - 1,
-// если первое меньше, чем второе;
-// 1 – если первоебольше, чем второе;
-// и 0 – если числа равны.
 
 // var x = + prompt('Введи первое число');
 // var y = + prompt('Введи второе число');
 
 // function calculation(x, y) {
 
-//     if (x < y) {
-//         return result = -1;
+//     if ((isNaN(x)) || (isNaN(y))) {
+
+//         document.getElementById('task1').innerHTML = "<h2>"+"Вы ввели НЕ число !!Error!!"+"</h2>";
 //     }
-//     else if (x > y) {
-//         return result = 1;
+//     else if ((x % 1 != 0) || (y % 1 != 0)) {
+
+//         document.getElementById('task1').innerHTML = "<h2>"+"Вы ввели НЕ целое число !!Error!!"+"</h2>";
+//     }
+//     else if ((x < 0) || (y < 0)) {
+
+//         document.getElementById('task1').innerHTML = "<h2>"+"Вы ввели отрицательное число !!Error!!"+"</h2>";
+//     }
+//     else if ((x == " ") || (y    == " ")) {
+        
+//         document.getElementById('task1').innerHTML = "<h2>"+"Вы НЕ ввели число или число равняется нулю !!Error!!"+"</h2>";
 //     }
 //     else {
-//         return result = 0;
+//         if (x < y) {
+//             document.getElementById('task1').innerHTML = "<h2>" + "Так как " + x + "  " + "<" + "  " + y + "  " + "Получилось :" + "  " + "-1" + "</h2>";
+//         }
+//         else if (x > y) {
+//             document.getElementById('task1').innerHTML = "<h2>" + "Так как " + x + "  " + ">" + "  " + y + "  " + "Получилось :" + "  " + "1" + "</h2>";
+//         }
+//         else {
+//             document.getElementById('task1').innerHTML = "<h2>" + "Так как " + x + "  " + "=" + "  " + y + "  " + "Получилось :" + "  " + "0" + "</h2>";
+//         }
 //     }
-
 // }
 
-// alert(calculation(x, y));
-
+// calculation(x, y);
 
 // ------------------------------- Task 2 ----------------------------------
 
-// Написать функцию, которая вычисляет факториал переданного ей числа.
+// var num = +prompt("Введите число");
 
-// var num = 4;
+// function factorial(num) {
 
-// if (num != 0) {
-//     function factorial(n) {
-
-//         return (n != 1) ? n * factorial(n - 1) : 1;
-        
+//     if (isNaN(num)) {
+//         document.getElementById('task2').innerHTML = "<h2>" + "Вы ввели НЕ число !!Error!!" + "</h2>";
+//     }
+//     else if (num % 1 != 0) {
+//         document.getElementById('task2').innerHTML = "<h2>" + "Вы ввели НЕ целое число !!Error!!" + "</h2>";
+//     }
+//     else if (num < 0) {
+//         document.getElementById('task2').innerHTML = "<h2>" + "Вы ввели отрицательное число !!Error!!" + "</h2>";
+//     }
+//     else {
+//         if (num === 0) {
+//             return 1;
+//         }
+//         return num * factorial(num - 1);
 //     }
 // }
-// else {
-//     alert('Произашла ошибка !!ERROR!!')
-// }
 
-// alert(factorial(num))
+// document.getElementById('task2').innerHTML = "<h2>" + "Факториал числа" + " " + num + " Будет: " + " " + factorial(num) + "</h2>"
 
 
 // ------------------------------- Task 3 ----------------------------------
 
-// Написать функцию, которая принимает три отдельные
-// цифры и превращает их в одно число.
-// Например: цифры 1, 4, 9 превратятся в число 149.
+// var one = + prompt('Введите первое число');
+// var two = + prompt('Введите второе число');
+// var three = + prompt('Введите третье число');
 
-// var one = "" + prompt('Введите первое число');
-// var two = "" + prompt('Введите второе число');
-// var three = "" + prompt('Введите третье число');
-    
+
 // function num(one, two, three) {
-//     return one + two + three;
+
+//     if ((isNaN(one)) || (isNaN(two)) || (isNaN(three))) {
+        
+//         document.getElementById('task3').innerHTML = "<h2>"+"Вы ввели НЕ число !!Error!!"+"</h2>";
+//     }
+//     else if ((one % 1 != 0) || (two % 1 != 0) || (three % 1 != 0)) {
+        
+//         document.getElementById('task3').innerHTML = "<h2>"+"Вы ввели НЕ целое число !!Error!!"+"</h2>";
+//     }
+//     else if (((one < 0)) || ((two < 0)) || ((three < 0))) {
+
+//         document.getElementById('task3').innerHTML = "<h2>"+"Вы ввели отрицательное число !!Error!!"+"</h2>";
+//     }
+//     else if ((one == " ") || (two == " ") || (three == " ")) {
+        
+//         document.getElementById('task3').innerHTML = "<h2>"+"Вы НЕ ввели число или число равняется нулю !!Error!!"+"</h2>";
+//     }
+//     else {
+//         return document.getElementById('task3').innerHTML = "<h2>" + "Вышло число: " + " " + one + two + three + "</h2>";
+//     }
 // }
 
-// alert('Получилось число:  ' +  num(one, two, three))
+// num(one, two, three);
 
 // ------------------------------- Task 4 ----------------------------------
-
-
-// Написать функцию, которая принимает длину и ширину
-// прямоугольника и вычисляет его площадь.
-// Если в функцию передали 1 параметр, то она вычисляет площадь квадрата.
 
 // var a = + prompt("Введи длину прямоугольника");
 // var b = + prompt("Введите ширину прямоугольника");
 
 // function multiplication(a, b) {
-//     return a * b;
+
+//     if ((isNaN(a)) || (isNaN(b))) {
+
+//         document.getElementById('task4').innerHTML = "<h2>"+"Вы ввели НЕ число !!Error!!"+"</h2>";
+//     }
+//     else if ((a % 1 != 0) || (b % 1 != 0)) {
+
+//         document.getElementById('task4').innerHTML = "<h2>"+"Вы ввели НЕ целое число !!Error!!"+"</h2>";
+//     }
+//     else if ((a < 0) || (b < 0)) {
+
+//         document.getElementById('task4').innerHTML = "<h2>"+"Вы ввели отрицательное число !!Error!!"+"</h2>";
+//     }
+//     else if ((a == 0) || (b == 0) || (a == null) || (b == null) || (a == " ") || (b == " ")) {
+
+//         if ((a == 0) || (a == null) || (a == " ")) {
+
+//             return document.getElementById('task4').innerHTML = "<h2>" + "Площадь равна: " + (b * b) + "</h2>";
+//         }
+//         else if ((b == 0) || (b == null) || (b == " ")) {
+
+//             return document.getElementById('task4').innerHTML = "<h2>" + "Площадь равна: " + (a * a) + "</h2>";
+//         }
+//     }
+//     else {
+    
+//         return document.getElementById('task4').innerHTML = "<h2>" + "Площадь равна: " + " " + (a * b) + "</h2>";
+//     }
 // }
-// alert("Площадь равна: " + multiplication(a,b))
+
+// multiplication(a, b);
 
 
 // ------------------------------- Task 5 ----------------------------------
 
-// Написать функцию, которая проверяет, является ли пере -
-// данное ей число совершенным.Совершенное число – эточисло,
-// равное сумме всех своих собственных делителей.
-
 // var number = +prompt('Введите число');
 
-function isPerfect(number) {
+// function isPerfect(number) {
 
-    if (isNaN(number)) {
-        console.log("!!Error!!")
-    }
-    else {
-        var temp = 0;
-        for (var i = 1; i <= number / 2; i++) {
-            if (number % i === 0) temp += i;
-        }
+//     if (isNaN(number)) {
+//         document.getElementById('task5').innerHTML = "<h2>"+"Вы ввели НЕ число !!Error!!"+"</h2>";
+//     }
+//     else if (number % 1 != 0) {
+//         document.getElementById('task5').innerHTML = "<h2>"+"Вы ввели НЕ целое число !!Error!!"+"</h2>";
+//     }
+//     else if (number < 0) {
+//         document.getElementById('task5').innerHTML = "<h2>"+"Вы ввели отрицательное число !!Error!!"+"</h2>";
+//     }
+//     else if (number == " ") {
+//         document.getElementById('task5').innerHTML = "<h2>"+"Вы НЕ ввели число или число равняется нулю !!Error!!"+"</h2>";
+//     }
+//     else {
+//         var temp = 0;
+//         for (var i = 1; i <= number / 2; i++) {
+//             if (number % i === 0) temp += i;
+//         }
 
-        (temp === number && temp !== 0)
-            ?
-            console.log("Это Совершенное число!")
-            :
-            console.log("Это НЕ Совершенное число!");
-    }
-}
+//         (temp === number && temp !== 0)
+//             ?
+//             document.getElementById('task5').innerHTML = "<h2>" +  number + "  " + "Это Совершенное число!"+"</h2>"
+//             :
+//             document.getElementById('task5').innerHTML = "<h2>" +  number + "  " + "Это НЕ Совершенное число!"+"</h2>"
+//     }
+// }
 // isPerfect(number);
 
 // ------------------------------- Task 6 ----------------------------------
 
-var min = + prompt('Введите минимальное число');
-var max = + prompt('Введите максимальное число');
+// var start = + prompt(`Введите начало диапазона больше нуля`);
+// var end = + prompt(`Введите конец диапазона`);
 
-function getPerfect(min, max) {
-    let result;
-    for (let i = min; i < max; i++) {
-    }
-}
+// function numUser(start, end) {
 
-// function getPerfect(a, b) {
-//   let result = [];
-//   for (let i = a; i < b; i++) {
-//     sum = 0;
-//     for (let n = 1; n <= i/2; n++) {
-//       if (i % n === 0) sum += n;
+//     let result = [];
+
+//     if (start > end) {
+//         let turn = start;
+//         start = end;
+//         end = turn;
 //     }
-//     if (i === sum) result.push(i);
-//   }
-//   return result;
+//     if ((isNaN(start)) || (isNaN(end))) {
+
+//         document.getElementById('task6').innerHTML = "<h2>"+"Вы ввели НЕ число !!Error!!"+"</h2>";
+//     }
+//     else if ((start % 1 != 0) || (end % 1 != 0)) {
+
+//         document.getElementById('task6').innerHTML = "<h2>"+"Вы ввели НЕ целое число !!Error!!"+"</h2>";
+//     }
+//     else if ((start < 0) || (end < 0)) {
+
+//         document.getElementById('task6').innerHTML = "<h2>"+"Вы ввели отрицательное число !!Error!!"+"</h2>";
+//     }
+//     else if ((start == " ") || (end == " ")) {
+        
+//         document.getElementById('task6').innerHTML = "<h2>"+"Вы НЕ ввели число или число равняется нулю !!Error!!"+"</h2>";
+//     }
+//     else {
+//         for (let i = start; i < end; i++) {
+//         sum = 0;
+//             for (let n = 1; n <= i / 2; n++) {
+//                 if (i % n === 0) sum += n;
+//             }
+//             if (i === sum) result.push(i);
+//         }
+//         return document.getElementById('task6').innerHTML = "<h2>" + "Все Совершенные числа из этого диапазона:  " + result + "</h2>";
+//     }
+    
 // }
- 
-// console.log(getPerfect(1, 1000));
 
-// Написать функцию, которая принимает минимальное и
-// максимальное значения для диапазона, и выводит
-// толькоте числа из диапазона, которые являются
-// совершенными.Используйте написанную ранее функцию,
-// чтобы узнавать, совершенное число или нет.
-
-
-
-
+// numUser(start, end)
 
 // ------------------------------- Task 7 ----------------------------------
 
+// Написать функцию, которая принимает время (часы, мину-
+// ты, секунды) и выводит его на экран в формате «чч:мм:сс»
+// Если при вызове функции минуты и/или секунды не были
+// переданы, то выводить их как 00.
+
+// var hour = +prompt("Введичите час");
+// var minut = +prompt("Введичите минуты");
+// var second = +prompt("Введичите секунды");
+
+// function time(h) {
+//   return function minutes(m) {
+//     return function seconds(s) {
+//       return `${h}:${m}:${s}`
+//     }
+//   }
+// }
+
+// console.log(time(h));
+
+
+// function timeStr(h,m,s){
+//     if ( s == undefined) {
+//         let str = `${h}:${m}:00`;
+//         return str;
+//     }
+//     else if ( m == undefined) {
+//         let str = `${h}:00:${0}`;
+//         return str;
+//     }
+//     else {
+//         let arr = [h, m, s];
+//         let str = arr.join(':');
+//         return str;
+//     }
+// }
+// alert(timeStr(h,m,s));
 
 
 // ------------------------------- Task 8 ----------------------------------
 
+// var h = +prompt("Введичите час");
+// var m = +prompt("Введичите минуты");
+// var s = +prompt("Введичите секунды");
 
+// function seconds(h, m, s) {
+
+//     if ((isNaN(h)) || (isNaN(m)) || (isNaN(s))) {
+
+//         document.getElementById('task8').innerHTML = "<h2>"+"Вы ввели НЕ число !!Error!!"+"</h2>";
+//     }
+//     else if ((h % 1 != 0) || (m % 1 != 0) || (s % 1 != 0)) {
+        
+//         document.getElementById('task8').innerHTML = "<h2>"+"Вы ввели НЕ целое число !!Error!!"+"</h2>";
+//     }
+//     else if (((h < 0)) || ((m < 0)) || ((s < 0))) {
+
+//         document.getElementById('task8').innerHTML = "<h2>"+"Вы ввели отрицательное число !!Error!!"+"</h2>";
+//     }
+//     else {
+//         var seconds = (h * 3600) + (m * 60) + s
+//         document.getElementById('task8').innerHTML = "<h2>" + "Вышло: " + " " + seconds + " " + " секунд"+ "</h2>"
+//     }
+// }
+
+// seconds(h, m, s)
 
 // ------------------------------- Task 9 ----------------------------------
 
+// var secondsUser = + prompt('Введите секунды')
+
+// function form(secondsUser) {
+ 
+//     if (isNaN(secondsUser)) {
+//         document.getElementById('task9').innerHTML = "<h2>"+"Вы ввели НЕ число !!Error!!"+"</h2>";
+//     }
+//     else if (secondsUser % 1 != 0) {
+//         document.getElementById('task9').innerHTML = "<h2>"+"Вы ввели НЕ целое число !!Error!!"+"</h2>";
+//     }
+//     else if (secondsUser < 0) {
+//         document.getElementById('task9').innerHTML = "<h2>"+"Вы ввели отрицательное число !!Error!!"+"</h2>";
+//     }
+//     else if (secondsUser == " ") {
+//         document.getElementById('task9').innerHTML = "<h2>"+"Вы НЕ ввели число или число равняется нулю !!Error!!"+"</h2>";
+//     }
+//     else {
+//         let sec = (secondsUser % 60).toString();
+//         let min = Math.floor(secondsUser / 60 % 60).toString();
+//         let hou = Math.floor(secondsUser / 60 / 60 % 60).toString();
+
+//         document.getElementById('task9').innerHTML = "Вышло" + "\n" + hou.padStart(2, '0') + ":" + min.padStart(2, '0') + ":" + sec.padStart(2, '0');
+//     }
+// }
+//  form(secondsUser)
 
 
 // ------------------------------- Task 10 ---------------------------------
+
+
+// Написать функцию, которая считает разницу между време-
+// нами. Функция принимает 6 параметров, которые описы-
+// вают 2 времни, и возвращает результат в виде строки
+// «чч:мм:сс». При выполнении задания используйте
+// функции из предыдущих 2-х заданий: сначала оба
+// времени переведите в секунды, узнайте разницу в
+// секундах, а потом разницу переведите обратно в
+// «чч:мм:сс».
+
+
