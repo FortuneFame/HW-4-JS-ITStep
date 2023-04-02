@@ -156,74 +156,17 @@ function checking(x) {
 
 // ------------------------------- Task 5 ----------------------------------
 
-
-
-// function perfect
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var number = 0;
-
-// var textTask5 = "";
-
-// number = prompt('Введите число');
-
 // function isPerfect(number) {
-
-// function isPerfect(number) {
-
-//     if (isNaN(number)) {
-//         document.getElementById('task5').innerHTML = "<h2>"+"Вы ввели НЕ число !!Error!!"+"</h2>";
-//     }
-//     else if (number % 1 != 0) {
-//         document.getElementById('task5').innerHTML = "<h2>"+"Вы ввели НЕ целое число !!Error!!"+"</h2>";
-//     }
-//     else if (number < 0) {
-//         document.getElementById('task5').innerHTML = "<h2>"+"Вы ввели отрицательное число !!Error!!"+"</h2>";
-//     }
-//     else if (number == " ") {
-//         document.getElementById('task5').innerHTML = "<h2>"+"Вы НЕ ввели число или число равняется нулю !!Error!!"+"</h2>";
-//     }
-//     else {
-//         var temp = 0;
-//         for (var i = 1; i <= number / 2; i++) {
-//             if (number % i === 0) temp += i;
-//         }
-
-//         (temp === number && temp !== 0)
-//             ?
-//             document.getElementById('task5').innerHTML += "<h2>" + number + "</h2>" + "</br>" + "<p>" + "Это Совершенное число!" + "</p>"
-//             :
-//             document.getElementById('task5').innerHTML += "<h2>" +  number + "  " + "Это НЕ Совершенное число!"+"</h2>"
-//     }
-// }
-// isPerfect(number);
-
-
-// function isPerfect(number) {
-
-//     var temp = 1;
-//     for (var i = 2; i <= number / 2; i++) {
-
-//         if (number % i === 0) temp += i;
-//     }
-//     if (temp === number && temp !== 0) {
+// 	var temp = 0;
+// 	for (var i = 1; i <= number / 2; i++) {
+// 		if (number % i === 0) temp += i;
+// 	}
+//     if (temp == number && temp != 0) {
 //         return true
 //     }
 //     else {
 //         return false;
 //     }
-    
 // }
 
 // var numberU = 0;
@@ -231,122 +174,48 @@ function checking(x) {
 // numberU = prompt('Введите число');
 
 // if (!checking(numberU) || numberU == 0) {
-//     task5.innerHTML += "<h2>" + "Что-то пошло не так, попробуйте еще раз \n🥺!!Error!!" + "</h2 > ";
+//     task5.innerHTML = "<h2>" + "Что-то пошло не так, попробуйте еще раз \n🥺!!Error!!" + "</h2 > ";
 // }
-// else if (isPerfect(numberU) && ) {
-//     task5.innerHTML = numberU + "Это Совершенное число!";
-// } else {
-//     task5.innerHTML = numberU + "Это НЕ Совершенное число!";
-// }
-
-
-// document.getElementById('task5').innerHTML += textTask5;
-//
-
-// console.log(isPerfect(28));
-
-
-
-// function IsPerfect(number) {
-
-//     var temp = 0;
-//     for (var i = 1; i <= number / 2; i++) {
-
-//         if (number % i === 0) temp += i;
-//     }
-//     if (temp === number && temp !== 0) {
-//         return true
+// else {
+//     if (isPerfect(+numberU)) {
+//         task5.innerHTML = numberU + " - Это Совершенное число!";
 //     }
 //     else {
-//         return false;
-//     }
-    
-// }
-
-// numberU = prompt('Введите число');
-
-// if (!checking(numberU) || numberU == 0) {
-//     task5.innerHTML += "<h2>" + "Что-то пошло не так, попробуйте еще раз \n🥺!!Error!!" + "</h2 > ";
-//     if (IsPerfect(numberU)) {
-//         task5.innerHTML = "Это Совершенное число!"
-//     } else {
-//         task5.innerHTML = "Это НЕ Совершенное число"
+//         task5.innerHTML = numberU + " - Это НЕ Совершенное число!";
 //     }
 // }
-
-// console.log(IsPerfect(28));
-
-
-numberU = 0;
-
-numberU = prompt('Введите число');
-
-function perfectNumber(num) {
-    let sums = 0 
-    let text = ""
-    let reminder;
-    for (let i = 1; i < num - 1; i++){
-        reminder = num % i;
-        if (reminder === 0) {
-            sums += i;
-        }
-    }
-    
-    if (!checking(num) || num == 0) {
-        text = "<h2>" + "Что-то пошло не так, попробуйте еще раз \n🥺!!Error!!" + "</h2 > ";
-    } else if (num === sums) {
-        text = " Это Совершенное число!"
-    } else {
-        text = "Это НЕ Совершенное число!"
-    }
-}
-task5.innerHTML = perfectNumber(numberU);
-
-
-
 
 // ------------------------------- Task 6 ----------------------------------
 
-// var start = + prompt(`Введите начало диапазона больше нуля`);
-// var end = + prompt(`Введите конец диапазона`);
+var start = + prompt(`Введите начало диапазона больше нуля`);
+var end = + prompt(`Введите конец диапазона`);
 
-// function numUser(start, end) {
+function perfectRange(start, end) {
 
-//     let result = [];
+    let result = [];
 
-//     if (start > end) {
-//         let turn = start;
-//         start = end;
-//         end = turn;
-//     }
-//     if ((isNaN(start)) || (isNaN(end))) {
+    if (start > end) {
+        let turn = start;
+        start = end;
+        end = turn;
+    }
 
-//         document.getElementById('task6').innerHTML = "<h2>"+"Вы ввели НЕ число !!Error!!"+"</h2>";
-//     }
-//     else if ((start % 1 != 0) || (end % 1 != 0)) {
-
-//         document.getElementById('task6').innerHTML = "<h2>"+"Вы ввели НЕ целое число !!Error!!"+"</h2>";
-//     }
-//     else if ((start < 0) || (end < 0)) {
-
-//         document.getElementById('task6').innerHTML = "<h2>"+"Вы ввели отрицательное число !!Error!!"+"</h2>";
-//     }
-//     else if ((start == " ") || (end == " ")) {
+    if (!checking(start) || !checking(end) || start == 0 || end == 0) { 
+         task6.innerHTML = "<h2>" + "Что-то пошло не так, попробуйте еще раз \n🥺!!Error!!" + "</h2 > ";
+    }
+    else {
+        if (isPerfect(number))
+    }
         
-//         document.getElementById('task6').innerHTML = "<h2>"+"Вы НЕ ввели число или число равняется нулю !!Error!!"+"</h2>";
-//     }
-//     else {
-//         for (let i = start; i < end; i++) {
-//         sum = 0;
-//             for (let n = 1; n <= i / 2; n++) {
-//                 if (i % n === 0) sum += n;
-//             }
-//             if (i === sum) result.push(i);
-//         }
-//         return document.getElementById('task6').innerHTML = "<h2>" + "Все Совершенные числа из этого диапазона:  " + result + "</h2>";
-//     }
+    }
+ 
+            // if (i === sum) result.push(i);
+
+        
+        // return document.getElementById('task6').innerHTML = "<h2>" + "Все Совершенные числа из этого диапазона:  " + result + "</h2>";
+
     
-// }
+
 
 // numUser(start, end)
 
