@@ -233,9 +233,9 @@ var hour = 0;
 var minut = 0;
 var second = 0;
 
-hour = prompt("Введичите часы");
-minut = prompt("Введичите минуты");
-second = prompt("Введичите секунды");
+// hour = prompt("Введичите часы");
+// minut = prompt("Введичите минуты");
+// second = prompt("Введичите секунды");
 
 
 function time(hour, minut, second) {
@@ -273,9 +273,9 @@ function timeIsSeconds(h, m, s) {
     return ((h * 60) * 60 + (m * 60) + s)   //(h * 3600) + (m * 60) + s
 }
 
-h = prompt("Введичите час");
-m = prompt("Введичите минуты");
-s = prompt("Введичите секунды");
+// h = prompt("Введичите час");
+// m = prompt("Введичите минуты");
+// s = prompt("Введичите секунды");
 
    
 
@@ -292,7 +292,7 @@ else {
 
 var secondsUser = 0;
 
-secondsUser = prompt('Введите секунды')
+// secondsUser = prompt('Введите секунды')
 
 
 function secondsToTime(seconds) {
@@ -322,50 +322,51 @@ else {
 // ------------------------------- Task 10 ---------------------------------
 
 
-// var oneH = 0;
-// var oneM = 0;
-// var oneS = 0;
+var oneH = 0;
+var oneM = 0;
+var oneS = 0;
 
-// var twoH = 0;
-// var twoM = 0;
-// var twoS = 0;
+var twoH = 0;
+var twoM = 0;
+var twoS = 0;
 
-//     oneH = prompt("Введичите сколько часов Первого времени");
-//     oneM = prompt("Введичите сколько минут Первого времени");
-//     oneS = prompt("Введичите сколько секунд Первого времени");
+    oneH = prompt("Введичите сколько часов Первого времени");
+    oneM = prompt("Введичите сколько минут Первого времени");
+    oneS = prompt("Введичите сколько секунд Первого времени");
 
-//     twoH = prompt("Введичите сколько часов Второго времени");
-//     twoM = prompt("Введичите сколько минут Второго времени");
-//     twoS = prompt("Введичите сколько секунд Второго времени");
+    twoH = prompt("Введичите сколько часов Второго времени");
+    twoM = prompt("Введичите сколько минут Второго времени");
+    twoS = prompt("Введичите сколько секунд Второго времени");
 
-// function simileTwoTime(oneH, oneM, oneS, twoH, twoM, twoS) {
+    function difference(c, d) {
+        if (c > d) {
+            var different = c - d;
+        }
+        else if (c < d) {
+            different = d - c;
+        }
+        return different
+    }
 
-//     var oneTimeSec = timeIsSeconds(oneH, oneM, oneS);
-//     var twoTimeSec = timeIsSeconds(twoH, twoM, twoS);
+function simileTwoTime(oneH, oneM, oneS, twoH, twoM, twoS) {
 
-//     function difference(c, d) {
-//         if (c > d) {
-//             var different = c - d;
-//         }
-//         else if (c < d) {
-//             different = d - c;
-//         }
-//         return different
-//     }
-//     var resultDiff = difference(oneTimeSec, twoTimeSec);
-//     return resultDiff
-// }
+    var oneTimeSec = timeIsSeconds(oneH, oneM, oneS);
+    var twoTimeSec = timeIsSeconds(twoH, twoM, twoS);
 
-// var resultTimeDiff = simileTwoTime(oneH, oneM, oneS, twoH, twoM, twoS);
-// var resultTask = secondsToTime(resultTimeDiff)
+    var resultDiff = difference(oneTimeSec, twoTimeSec);
+    return resultDiff
+}
 
-//     var timeOne = time(oneH, oneM, oneS);
-//     var timeTwo = time(twoH, twoM, twoS);
+var resultTimeDiff = simileTwoTime(oneH, oneM, oneS, twoH, twoM, twoS);
+var resultTask = secondsToTime(resultTimeDiff)
 
-// if (!checking(oneH) || !checking(oneM) || !checking(oneS) || !checking(twoH) || !checking(twoM) || !checking(twoS)) {
-//     task10.innerHTML = "<h2>" + "Что-то пошло не так, попробуйте еще раз \n🥺!!Error!!" + "</h2 > "
-// }
-// else {
-//     task10.innerHTML = "<h2>" + "Разница между " + " " + timeOne + " " + "и " + timeTwo + "</br>" + "Вышло " + " " + resultTask + "</h2>";
-// }
+    var timeOne = time(oneH, oneM, oneS);
+    var timeTwo = time(twoH, twoM, twoS);
+
+if (!checking(oneH) || !checking(oneM) || !checking(oneS) || !checking(twoH) || !checking(twoM) || !checking(twoS)) {
+    task10.innerHTML = "<h2>" + "Что-то пошло не так, попробуйте еще раз \n🥺!!Error!!" + "</h2 > "
+}
+else {
+    task10.innerHTML = "<h2>" + "Разница между " + " " + timeOne + " " + "и " + timeTwo + "</br>" + "Вышло " + " " + resultTask + "</h2>";
+}
 
