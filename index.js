@@ -25,6 +25,14 @@ function checking(x) {
 }
 
 
+function timeForm(h, m, s) {
+    h = parseInt(h)
+    m = parseInt(m)
+    s = parseInt(s)
+    return ((h < 10 ? "0" + h : h) + " : " + (m < 10 ? "0" + m : m) + " : " + (s < 10 ? "0" + s : s));
+}
+
+
 // ------------------------------- Task 1 ----------------------------------
 
 
@@ -50,13 +58,12 @@ function checking(x) {
 // }
 
 // if (!checking(x) || !checking(y)) {
-//     textTask1 += "<h2>" + "Что-то пошло не так, попробуйте еще раз \n🥺!!Error!!" + "</h2 > ";
+//     task1.innerHTML = "<h2>" + "Что-то пошло не так, попробуйте еще раз \n🥺!!Error!!" + "</h2 > ";
 // }
 // else {
-//     textTask1 += "<p>" + "Первое значение " + x + "  " + "<br>" + "Второе значение" + "  " + y + "  " + "<br>" + "Получилось :" + "  " + (calculation(x, y)) + "</p>";
+//     task1.innerHTML = "<p>" + "Первое значение " + x + "  " + "<br>" + "Второе значение" + "  " + y + "  " + "<br>" + "Получилось :" + "  " + (calculation(x, y)) + "</p>";
 // }
 
-// document.getElementById('task1').innerHTML += text;
 
 
 // ------------------------------- Task 2 ----------------------------------
@@ -75,13 +82,11 @@ function checking(x) {
 // }
 
 // if (!checking(nums)) {
-//     textTask2 += "<h2>" + "Что-то пошло не так, попробуйте еще раз \n🥺!!Error!!" + "</h2 > ";
+//     task2.innerHTML = "<h2>" + "Что-то пошло не так, попробуйте еще раз \n🥺!!Error!!" + "</h2 > ";
 // }
 // else {
-//     textTask2 = "<p>" + "Факториал числа" + " " + nums + "<br>" + " Будет: " + " " + factorial(nums) + "</p>";
+//     task2.innerHTML = "<p>" + "Факториал числа" + " " + nums + "<br>" + " Будет: " + " " + factorial(nums) + "</p>";
 // }
-
-// document.getElementById('task2').innerHTML += textTask2;
 
 
 // ------------------------------- Task 3 ----------------------------------
@@ -109,13 +114,11 @@ function checking(x) {
 // }
 
 // if (!checking(one) || !checking(two) || !checking(three)) {
-//     textTask3 += "<h2>" + "Что-то пошло не так, попробуйте еще раз \n🥺!!Error!!" + "</h2 > ";
+//     task3.innerHTML = "<h2>" + "Что-то пошло не так, попробуйте еще раз \n🥺!!Error!!" + "</h2 > ";
 // }
 // else {
-//     textTask3 += "<p>" + "Вышло число: " + createNumber(one, two, three) + "</p>";
+//     task3.innerHTML = "<p>" + "Вышло число: " + createNumber(one, two, three) + "</p>";
 // }
-
-// document.getElementById('task3').innerHTML += textTask3;
 
 
 // ------------------------------- Task 4 ----------------------------------
@@ -145,16 +148,15 @@ function checking(x) {
 // }
 
 // if (!checking(a) || !checking(b)) {
-//     textTask4 += "<h2>" + "Что-то пошло не так, попробуйте еще раз \n🥺!!Error!!" + "</h2 > ";
+//     task4.innerHTML = "<h2>" + "Что-то пошло не так, попробуйте еще раз \n🥺!!Error!!" + "</h2 > ";
 // }
 // else {
-//     textTask4 += "<p>" + "Площадь прямоугольника будет: " + " " + square(a, b) + "</p>";
+//     task4.innerHTML = "<p>" + "Площадь прямоугольника будет: " + " " + square(a, b) + "</p>";
 // }
-
-// document.getElementById('task4').innerHTML += textTask4;
 
 
 // ------------------------------- Task 5 ----------------------------------
+
 
 // function isPerfect(number) {
 // 	var temp = 0;
@@ -185,205 +187,185 @@ function checking(x) {
 //     }
 // }
 
+
 // ------------------------------- Task 6 ----------------------------------
 
-var start = + prompt(`Введите начало диапазона больше нуля`);
-var end = + prompt(`Введите конец диапазона`);
 
-function perfectRange(start, end) {
+// var start = 0;
+// var end = 0;
 
-    let result = [];
+// function perfectNumFromRange(start, end) {
 
-    if (start > end) {
-        let turn = start;
-        start = end;
-        end = turn;
-    }
+//     start = prompt(`Введите начало диапазона больше нуля`);
+//     end = prompt(`Введите конец диапазона`);
 
-    if (!checking(start) || !checking(end) || start == 0 || end == 0) { 
-         task6.innerHTML = "<h2>" + "Что-то пошло не так, попробуйте еще раз \n🥺!!Error!!" + "</h2 > ";
-    }
-    else {
-        if (isPerfect(number))
-    }
-        
-    }
- 
-            // if (i === sum) result.push(i);
+//     let result = [];
 
-        
-        // return document.getElementById('task6').innerHTML = "<h2>" + "Все Совершенные числа из этого диапазона:  " + result + "</h2>";
+//     if (start > end) {
+//         let turn = start;
+//         start = end;
+//         end = turn;
+//     }
 
-    
+//     if (!checking(start) || !checking(end) || start == 0 || end == 0) {
+//         task6.innerHTML = "<h2>" + "Что-то пошло не так, попробуйте еще раз \n🥺!!Error!!" + "</h2 > "
+//     }
+//     else {
+//         for (i = start; i <= end; i++) {
+//             if (isPerfect(i)) {
+//                 result.push(i);
+//                 task6.innerHTML = "<h2>" + "Все Совершенные числа из этого диапазона: " + result.join(", ") + "</h2>"
+//             }
+//         }
+//     }
+// }
 
+// perfectNumFromRange(start, end)
 
-// numUser(start, end)
+// Очень удобно работать с массивом и легко на первый взгляд,
+// Я как увидела сколько методов, голова кругом) но круто ))
+
 
 // ------------------------------- Task 7 ----------------------------------
 
-// var hour = +prompt("Введичите час");
-// var minut = +prompt("Введичите минуты");
-// var second = +prompt("Введичите секунды");
 
-// function timeStr(hour, minut, second) {
+var hour = 0;
+var minut = 0;
+var second = 0;
 
+hour = prompt("Введичите часы");
+minut = prompt("Введичите минуты");
+second = prompt("Введичите секунды");
+
+
+function time(hour, minut, second) {
+
+    hour = +hour;
+    minut = +minut;
+    second = +second;
+
+    minut = minut + (second - second % 60) / 60;
+    second = second % 60;
+    hour = hour + (minut - minut % 60) / 60;
+    minut = minut % 60;
+
+    return timeForm(hour, minut, second);
+
+}
+
+if (!checking(hour) || !checking(minut) || !checking(second)) {
+    task7.innerHTML = "<h2>" + "Что-то пошло не так, попробуйте еще раз \n🥺!!Error!!" + "</h2 > "
+}
+else {
+     task7.innerHTML = "<h2>" + time(hour, minut, second) + "</h2>"
+}
     
-//     if ((isNaN(hour)) || (isNaN(minut)) || (isNaN(second))) {
-        
-//         document.getElementById('task7').innerHTML = "<h2>" + "Вы ввели НЕ число !!Error!!" + "</h2>";
-//     }
-//     else if ((hour % 1 != 0) || (minut % 1 != 0) || (second % 1 != 0)) {
-        
-//         document.getElementById('task7').innerHTML = "<h2>" + "Вы ввели НЕ целое число !!Error!!" + "</h2>";
-//     }
-//     else if (((hour < 0)) || ((minut < 0)) || ((second < 0))) {
-
-//         document.getElementById('task7').innerHTML = "<h2>" + "Вы ввели отрицательное число !!Error!!" + "</h2>";
-//     }
-//     else if ((hour == " ") || (minut == " ") || (second == " ")) {
-        
-//         document.getElementById('task7').innerHTML = "<h2>" + "Вы НЕ ввели число или число равняется нулю !!Error!!" + "</h2>";
-//     }
-//     else {
-    
-//         if (second == undefined) {
-//             let str = `${hour}:${minut}:00`;
-//             return str;
-//         }
-//         else if (minut == undefined) {
-//             let str = `${hour}:00:${second}`;
-//             return str;
-//         }
-//         else {
-//             let arr = [hour, minut, second];
-//             let str = arr.join(':');
-//             return str;
-//         }
-//     }
-// }
-// document.getElementById('task7').innerHTML = "<h2>"+timeStr(hour,minut,second)+"</h2>";
-
 
 // ------------------------------- Task 8 ----------------------------------
 
-// var h = +prompt("Введичите час");
-// var m = +prompt("Введичите минуты");
-// var s = +prompt("Введичите секунды");
 
-// function seconds(h, m, s) {
+var h = 0;
+var m = 0;
+var s = 0;
 
-//     if ((isNaN(h)) || (isNaN(m)) || (isNaN(s))) {
+function timeIsSeconds(h, m, s) {
+   
+    return ((h * 60) * 60 + (m * 60) + s)   //(h * 3600) + (m * 60) + s
+}
 
-//         document.getElementById('task8').innerHTML = "<h2>"+"Вы ввели НЕ число !!Error!!"+"</h2>";
-//     }
-//     else if ((h % 1 != 0) || (m % 1 != 0) || (s % 1 != 0)) {
-        
-//         document.getElementById('task8').innerHTML = "<h2>"+"Вы ввели НЕ целое число !!Error!!"+"</h2>";
-//     }
-//     else if (((h < 0)) || ((m < 0)) || ((s < 0))) {
+h = prompt("Введичите час");
+m = prompt("Введичите минуты");
+s = prompt("Введичите секунды");
 
-//         document.getElementById('task8').innerHTML = "<h2>"+"Вы ввели отрицательное число !!Error!!"+"</h2>";
-//     }
-//     else {
-//         var seconds = (h * 3600) + (m * 60) + s
-//         document.getElementById('task8').innerHTML = "<h2>" + "Вышло: " + " " + seconds + " " + " секунд"+ "</h2>"
-//     }
-// }
+   
 
+if (!checking(h) || !checking(m) || !checking(s)) {
+    task8.innerHTML = "<h2>" + "Что-то пошло не так, попробуйте еще раз \n🥺!!Error!!" + "</h2 > "
+}
+else {
+    task8.innerHTML = "<h2>" + "Из " + " " + parseInt(h) + " : " + parseInt(m) + " : " + parseInt(s) + "</br>" + "Вышло: " + " " + timeIsSeconds(h, m, s) + " " + " секунд" + "</h2>"
+}
 
-// seconds(h, m, s)
 
 // ------------------------------- Task 9 ----------------------------------
 
-// var secondsUser = + prompt('Введите секунды')
 
-// function form(secondsUser) {
- 
-//     if (isNaN(secondsUser)) {
-//         document.getElementById('task9').innerHTML = "<h2>"+"Вы ввели НЕ число !!Error!!"+"</h2>";
-//     }
-//     else if (secondsUser % 1 != 0) {
-//         document.getElementById('task9').innerHTML = "<h2>"+"Вы ввели НЕ целое число !!Error!!"+"</h2>";
-//     }
-//     else if (secondsUser < 0) {
-//         document.getElementById('task9').innerHTML = "<h2>"+"Вы ввели отрицательное число !!Error!!"+"</h2>";
-//     }
-//     else if (secondsUser == " ") {
-//         document.getElementById('task9').innerHTML = "<h2>"+"Вы НЕ ввели число или число равняется нулю !!Error!!"+"</h2>";
-//     }
-//     else {
-//         let sec = (secondsUser % 60).toString();
-//         let min = Math.floor(secondsUser / 60 % 60).toString();
-//         let hou = Math.floor(secondsUser / 60 / 60 % 60).toString();
+var secondsUser = 0;
 
-//         document.getElementById('task9').innerHTML = "<h2>" + "Вышло" + "\n" + hou.padStart(2, '0') + ":" + min.padStart(2, '0') + ":" + sec.padStart(2, '0')+"<h2>";
-//     }
-// }
-//  form(secondsUser)
+secondsUser = prompt('Введите секунды')
+
+
+function secondsToTime(seconds) {
+
+    var sec = 0;
+    var min = 0;
+    var hou = 0;
+    
+
+    min = Math.floor(seconds / 60)
+    sec = seconds % 60
+    hou = Math.floor(min / 60)
+    min = min % 60
+    
+    return timeForm(hou, min, sec)
+
+}
+
+if (!checking(secondsUser)) {
+    task9.innerHTML = "<h2>" + "Что-то пошло не так, попробуйте еще раз \n🥺!!Error!!" + "</h2 > "
+}
+else {
+    task9.innerHTML = "<h2>" + "Из " + " " + parseInt(secondsUser) + " " + "секунд" + "</br>" + "Вышло " + " " + secondsToTime(secondsUser) + "</h2>";
+}
 
 
 // ------------------------------- Task 10 ---------------------------------
 
-// Для того чтобы было взаимодействие с HTML оставила как есть
-// Если нужно то переделаю на alert
 
+// var oneH = 0;
+// var oneM = 0;
+// var oneS = 0;
 
-// var oneH = +prompt("Введичите сколько часов Первого времени");
-// var oneM = +prompt("Введичите сколько минут Первого времени");
-// var oneS = +prompt("Введичите сколько секунд Первого времени");
+// var twoH = 0;
+// var twoM = 0;
+// var twoS = 0;
 
-// var twoH = +prompt("Введичите сколько часов Второго времени");
-// var twoM = +prompt("Введичите сколько минут Второго времени");
-// var twoS = +prompt("Введичите сколько секунд Второго времени");
+//     oneH = prompt("Введичите сколько часов Первого времени");
+//     oneM = prompt("Введичите сколько минут Первого времени");
+//     oneS = prompt("Введичите сколько секунд Первого времени");
 
+//     twoH = prompt("Введичите сколько часов Второго времени");
+//     twoM = prompt("Введичите сколько минут Второго времени");
+//     twoS = prompt("Введичите сколько секунд Второго времени");
 
-// if ((isNaN(oneH)) || (isNaN(oneM)) || (isNaN(oneS)) || (isNaN(twoH)) || (isNaN(twoM)) || (isNaN(twoS))) {
-    
-//     document.getElementById('task10').innerHTML = "<h2>" + "Вы ввели НЕ число !!Error!!" + "</h2>";
-// }
-// else if ((oneH % 1 != 0) || (oneM % 1 != 0) || (oneS % 1 != 0) || (twoH % 1 != 0) || (twoM % 1 != 0) || (twoS % 1 != 0)) {
-    
-//     document.getElementById('task10').innerHTML = "<h2>" + "Вы ввели НЕ целое число !!Error!!" + "</h2>";
-// }
-// else if ((oneH < 0) || (oneM < 0) || (oneS < 0) || (twoH < 0) || (twoM < 0) || (twoS < 0)) {
+// function simileTwoTime(oneH, oneM, oneS, twoH, twoM, twoS) {
 
-//     document.getElementById('task10').innerHTML = "<h2>" + "Вы ввели отрицательное число !!Error!!" + "</h2>";
-// }
-// else {
-
-//     function decoding(sec) {
-//         let se = (sec % 60).toString();
-//         let mi = Math.floor(sec / 60 % 60).toString();
-//         let ho = Math.floor(sec / 60 / 60 % 60).toString();
-//         return  (ho.padStart(2, '0') + ":" + mi.padStart(2, '0') + ":" + se.padStart(2, '0'))
-//     }
-
-//     function reduction(h, m, s) {
-//         var secEnd = (h * 3600) + (m * 60) + s
-//         return secEnd
-//     }
-
-//     var c = reduction(oneH, oneM, oneS);
-//     var d = reduction(twoH, twoM, twoS);
-
+//     var oneTimeSec = timeIsSeconds(oneH, oneM, oneS);
+//     var twoTimeSec = timeIsSeconds(twoH, twoM, twoS);
 
 //     function difference(c, d) {
-
 //         if (c > d) {
 //             var different = c - d;
 //         }
 //         else if (c < d) {
 //             different = d - c;
 //         }
-
-        
-//         var res = decoding(different);
-
-//     return res
+//         return different
 //     }
-
-//     var oneTime = decoding(c);
-//     var twoTime = decoding(d);
-
-//     document.getElementById('task10').innerHTML = "<h2>"+ "Разница между:" +" "+ oneTime +" и " + twoTime + " "+ "Будет:" +" "+ difference(c, d) + "</h2>";
+//     var resultDiff = difference(oneTimeSec, twoTimeSec);
+//     return resultDiff
 // }
+
+// var resultTimeDiff = simileTwoTime(oneH, oneM, oneS, twoH, twoM, twoS);
+// var resultTask = secondsToTime(resultTimeDiff)
+
+//     var timeOne = time(oneH, oneM, oneS);
+//     var timeTwo = time(twoH, twoM, twoS);
+
+// if (!checking(oneH) || !checking(oneM) || !checking(oneS) || !checking(twoH) || !checking(twoM) || !checking(twoS)) {
+//     task10.innerHTML = "<h2>" + "Что-то пошло не так, попробуйте еще раз \n🥺!!Error!!" + "</h2 > "
+// }
+// else {
+//     task10.innerHTML = "<h2>" + "Разница между " + " " + timeOne + " " + "и " + timeTwo + "</br>" + "Вышло " + " " + resultTask + "</h2>";
+// }
+
